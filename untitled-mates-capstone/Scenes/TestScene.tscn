@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://jiob7g56jweg"]
+
+[ext_resource type="Script" uid="uid://c7nwebjyyviyw" path="res://Scenes/test_scene.gd" id="1_8k7wh"]
+[ext_resource type="Texture2D" uid="uid://b780fer2e66we" path="res://Sprites and Assets/Other/icon.svg" id="1_b5ayd"]
+[ext_resource type="PackedScene" uid="uid://ev6gqbm0bx3c" path="res://Scenes/Player.tscn" id="2_5lt6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f8pd"]
+size = Vector2(119, 120)
+
+[node name="Node2D" type="Node2D" unique_id=659878056]
+script = ExtResource("1_8k7wh")
+
+[node name="TestWalls" type="StaticBody2D" parent="." unique_id=1823353677]
+position = Vector2(2897, 695.99994)
+scale = Vector2(53.540997, -1.172921)
+
+[node name="Sprite" type="Sprite2D" parent="TestWalls" unique_id=307267897]
+texture = ExtResource("1_b5ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls" unique_id=191384445]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2f8pd")
+
+[node name="TestWalls2" type="StaticBody2D" parent="." unique_id=1865455390]
+position = Vector2(2603, -61.000004)
+scale = Vector2(47.919807, 1.3241988)
+
+[node name="Sprite" type="Sprite2D" parent="TestWalls2" unique_id=1759097006]
+texture = ExtResource("1_b5ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls2" unique_id=225942241]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2f8pd")
+
+[node name="TestWalls3" type="StaticBody2D" parent="." unique_id=1462409173]
+position = Vector2(-179, 330)
+scale = Vector2(1.2001843, 6.6482735)
+
+[node name="Sprite" type="Sprite2D" parent="TestWalls3" unique_id=100321856]
+texture = ExtResource("1_b5ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls3" unique_id=1764364835]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2f8pd")
+
+[node name="TestWalls4" type="StaticBody2D" parent="." unique_id=414777832]
+position = Vector2(5778, 279)
+rotation = -0.6302552
+scale = Vector2(1.3209903, 9.00489)
+
+[node name="Sprite" type="Sprite2D" parent="TestWalls4" unique_id=584361161]
+texture = ExtResource("1_b5ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls4" unique_id=486262961]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2f8pd")
+
+[node name="TestWalls5" type="StaticBody2D" parent="." unique_id=2025161635]
+position = Vector2(4332, 846.00006)
+rotation = -1.3190371
+scale = Vector2(5.053899, 8.831661)
+
+[node name="Sprite" type="Sprite2D" parent="TestWalls5" unique_id=869331649]
+texture = ExtResource("1_b5ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls5" unique_id=1056279999]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2f8pd")
+
+[node name="TestWalls6" type="StaticBody2D" parent="." unique_id=1394215632]
+position = Vector2(3479, 850.00006)
+rotation = -1.8348142
+scale = Vector2(5.053899, 8.831661)
+
+[node name="Sprite" type="Sprite2D" parent="TestWalls6" unique_id=839724059]
+texture = ExtResource("1_b5ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls6" unique_id=645881142]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2f8pd")
+
+[node name="TestWalls7" type="StaticBody2D" parent="." unique_id=249676043]
+position = Vector2(1136, 801)
+scale = Vector2(5.1865196, 4.6251416)
+
+[node name="Sprite" type="Sprite2D" parent="TestWalls7" unique_id=921437424]
+texture = ExtResource("1_b5ayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls7" unique_id=1832115261]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_2f8pd")
+
+[node name="Node2D" parent="." unique_id=1724111863 instance=ExtResource("2_5lt6y")]
+position = Vector2(173, 448)
+
+[node name="leftCamLimit" type="Node2D" parent="." unique_id=33099905]
+position = Vector2(-248, 326)
+
+[node name="rightCamLimit" type="Node2D" parent="." unique_id=707713312]
+position = Vector2(5991, 613)
+
+[node name="upCamLimit" type="Node2D" parent="." unique_id=149340503]
+position = Vector2(2605, -90)
+
+[node name="downCamLimit" type="Node2D" parent="." unique_id=1794297412]
+position = Vector2(2561, 744)
