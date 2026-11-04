@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ev6gqbm0bx3c" path="res://Scenes/Player.tscn" id="2_5lt6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f8pd"]
-size = Vector2(119, 120)
+size = Vector2(129.21716, 120.48706)
 
 [node name="Node2D" type="Node2D" unique_id=659878056]
 script = ExtResource("1_8k7wh")
@@ -76,7 +76,7 @@ scale = Vector2(5.053899, 8.831661)
 texture = ExtResource("1_b5ayd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls6" unique_id=645881142]
-position = Vector2(0.5, 0)
+position = Vector2(0.6143799, -0.89071655)
 shape = SubResource("RectangleShape2D_2f8pd")
 
 [node name="TestWalls7" type="StaticBody2D" parent="." unique_id=249676043]
@@ -87,7 +87,7 @@ scale = Vector2(5.1865196, 4.6251416)
 texture = ExtResource("1_b5ayd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls7" unique_id=1832115261]
-position = Vector2(0.5, 0)
+position = Vector2(0.09640503, -1.1341858)
 shape = SubResource("RectangleShape2D_2f8pd")
 
 [node name="Node2D" parent="." unique_id=1724111863 instance=ExtResource("2_5lt6y")]

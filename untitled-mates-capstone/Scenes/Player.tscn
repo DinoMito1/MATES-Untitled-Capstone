@@ -22,4 +22,3 @@ shape = SubResource("CapsuleShape2D_2f8pd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=594640316]
 position_smoothing_enabled = true
-position_smoothing_speed = 4.0
