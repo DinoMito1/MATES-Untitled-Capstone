@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1sadmfjvwbgq"]
+
+[ext_resource type="Script" uid="uid://gljhm7jifx6n" path="res://Scenes/tools/camera_zoom_zone.gd" id="1_51ti4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tt2f"]
+size = Vector2(200, 200)
+
+[node name="CameraZoomZone" type="Node2D" unique_id=906295064]
+script = ExtResource("1_51ti4")
+metadata/mouseInfluence = 0.05
+metadata/cameraZoom = Vector2(2, 2)
+metadata/zoomAnimTime = 0.5
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1587169658]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1703179407]
+shape = SubResource("RectangleShape2D_5tt2f")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

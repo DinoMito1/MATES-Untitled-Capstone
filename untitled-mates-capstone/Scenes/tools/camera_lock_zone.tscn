@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bl8bof6oknd4u"]
+
+[ext_resource type="Script" uid="uid://d1xyiqe1ef2pm" path="res://Scenes/tools/camera_lock_zone.gd" id="1_feh4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tt2f"]
+size = Vector2(200, 200)
+
+[node name="CameraLockZone" type="Node2D" unique_id=906295064]
+script = ExtResource("1_feh4m")
+metadata/CameraLockPos = Vector2i(0, 0)
+metadata/mouseInfluence = 0.05
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1587169658]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1703179407]
+shape = SubResource("RectangleShape2D_5tt2f")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

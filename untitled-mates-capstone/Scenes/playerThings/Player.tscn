@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ev6gqbm0bx3c"]
+
+[ext_resource type="Script" uid="uid://cprlkkkmy743t" path="res://Scenes/playerThings/Player.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://b780fer2e66we" path="res://Sprites and Assets/Other/icon.svg" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://cj47fh20rasc2" path="res://Sprites and Assets/2D/Characters/Player/SketchHeadIdle1TEST.png" id="3_i6bhw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2f8pd"]
+
+[node name="Node2D" type="Node2D" unique_id=1724111863]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=594640316]
+zoom = Vector2(0.78, 0.78)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+editor_draw_drag_margin = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1195788699]
+scale = Vector2(3.5, 3.5)
+script = ExtResource("1_kyqiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1121630224]
+shape = SubResource("CapsuleShape2D_2f8pd")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=2049842888]
+z_index = -1
+position = Vector2(0, -1)
+scale = Vector2(0.18750003, 0.25)
+skew = -0.10471976
+texture = ExtResource("1_rpqav")
+
+[node name="SketchHeadBase" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=1554020181]
+z_index = -1
+position = Vector2(-3.4285727, -14.285716)
+scale = Vector2(0.0195088, 0.019508788)
+texture = ExtResource("3_i6bhw")
