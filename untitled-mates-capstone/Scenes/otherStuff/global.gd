@@ -1,5 +1,5 @@
 extends Node2D
-
+#Info used to save the game:
 #room status variables - will be used to save and load loaction
 @onready var currentRoom : String = 'TestScene'
 @onready var roomEntrance : int = 1  # used for rooms with multiple entrances/exits to show which entrance you came in from.
@@ -12,10 +12,17 @@ extends Node2D
 #player variables
 @onready var playerHealth : int = 5
 
+#settings stuff
+@onready var mouseSensitivity : float = 1
+
+#Other stuff not for saving the game:
 #Camera Stuff
 @onready var camLocked : bool = false
 @onready var lockedCameraPos : Vector2 = Vector2(0,0)
 @onready var cameraMouseInfluence : float = 0.55
+
+#misc nonsense
+@onready var gamePaused : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,4 +31,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_released("pause"):
+		
+		if gamePaused == false:
+			gamePaused = true
+			#get_tree().paused = true
+		else:
+			gamePaused = false
+			#get_tree().paused = false

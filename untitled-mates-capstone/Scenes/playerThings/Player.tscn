@@ -9,10 +9,11 @@
 [node name="Node2D" type="Node2D" unique_id=1724111863]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=594640316]
+position = Vector2(0, -21)
 zoom = Vector2(0.78, 0.78)
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 6.0
+position_smoothing_speed = 8.0
 editor_draw_drag_margin = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1195788699]

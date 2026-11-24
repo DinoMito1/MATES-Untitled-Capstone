@@ -1,5 +1,7 @@
 extends Node2D
-
+@export var mouseInfluence : float = 0.05
+@export var cameraZoom : float = 2
+@export var zoomAnimTime : float = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,8 +15,8 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D and body.get_parent().get_child(0) is Camera2D:
-		get_tree().create_tween().tween_property($"../Player/Camera2D", "zoom", Vector2(0.78,0.78) * self.get_meta("cameraZoom"), self.get_meta('zoomAnimTime')).set_trans(Tween.TRANS_EXPO)
+		get_tree().create_tween().tween_property($"../Player/Camera2D", "zoom", Vector2(0.78,0.78) * self.cameraZoom, self.zoomAnimTime).set_trans(Tween.TRANS_EXPO)
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is CharacterBody2D and body.get_parent().get_child(0) is Camera2D:
-		get_tree().create_tween().tween_property($"../Player/Camera2D", "zoom", Vector2(0.78,0.78), self.get_meta('zoomAnimTime')).set_trans(Tween.TRANS_EXPO)
+		get_tree().create_tween().tween_property($"../Player/Camera2D", "zoom", Vector2(0.78,0.78), self.zoomAnimTime).set_trans(Tween.TRANS_EXPO)

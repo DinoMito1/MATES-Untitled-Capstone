@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://brtvdw8e5wqrc"]
+
+[ext_resource type="Texture2D" uid="uid://b780fer2e66we" path="res://Sprites and Assets/Other/icon.svg" id="1_fcx1b"]
+[ext_resource type="PackedScene" uid="uid://da50vumf63w72" path="res://Scenes/playerThings/3DPlayerTest.tscn" id="1_xxfxb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2f8pd"]
+size = Vector3(146.63098, 1, 165.66443)
+
+[node name="Node3D" type="Node3D" unique_id=2018042908]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1327932281]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1781630367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.654602, 0, 7.9287834)
+shape = SubResource("BoxShape3D_2f8pd")
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D" unique_id=1002777185]
+transform = Transform3D(114.5, 0, 0, 0, -5.638769e-06, -116, 0, 129, -5.070521e-06, -11.657536, 0.4811035, 7.844162)
+modulate = Color(0, 2.4921954, 0, 1)
+texture = ExtResource("1_fcx1b")
+
+[node name="Player" parent="." unique_id=640313578 instance=ExtResource("1_xxfxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3737626, 2.2768807, -5.533213)

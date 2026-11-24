@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://c7nwebjyyviyw" path="res://Scenes/rooms/test_scene.gd" id="1_y5bsq"]
 [ext_resource type="Texture2D" uid="uid://b780fer2e66we" path="res://Sprites and Assets/Other/icon.svg" id="2_kus0s"]
 [ext_resource type="PackedScene" uid="uid://ev6gqbm0bx3c" path="res://Scenes/playerThings/Player.tscn" id="3_gpfw8"]
-[ext_resource type="PackedScene" uid="uid://bl8bof6oknd4u" path="res://Scenes/tools/camera_lock_zone.tscn" id="4_tkcya"]
-[ext_resource type="PackedScene" uid="uid://b1sadmfjvwbgq" path="res://Scenes/tools/camera_zoom_zone.tscn" id="5_kus0s"]
+[ext_resource type="PackedScene" uid="uid://bl8bof6oknd4u" path="res://Scenes/toolsAndTriggers/camera_lock_zone.tscn" id="4_tkcya"]
+[ext_resource type="PackedScene" uid="uid://b1sadmfjvwbgq" path="res://Scenes/toolsAndTriggers/camera_zoom_zone.tscn" id="5_kus0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f8pd"]
 size = Vector2(131.40294, 122.68336)
@@ -13,14 +13,15 @@ size = Vector2(131.40294, 122.68336)
 script = ExtResource("1_y5bsq")
 
 [node name="TestWalls" type="StaticBody2D" parent="." unique_id=1823353677]
-position = Vector2(1745, 704)
-scale = Vector2(68.77248, -1.172921)
+position = Vector2(1745.0001, 752)
+scale = Vector2(66.795235, -1.8585724)
 
 [node name="Sprite" type="Sprite2D" parent="TestWalls" unique_id=307267897]
 texture = ExtResource("2_kus0s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestWalls" unique_id=191384445]
 position = Vector2(0.5, 0)
+scale = Vector2(0.99999994, 1)
 shape = SubResource("RectangleShape2D_2f8pd")
 
 [node name="TestWalls2" type="StaticBody2D" parent="." unique_id=1865455390]
@@ -249,7 +250,7 @@ position = Vector2(5991, 613)
 position = Vector2(2038, -2124)
 
 [node name="downCamLimit" type="Node2D" parent="." unique_id=1794297412]
-position = Vector2(2635, 722)
+position = Vector2(2635, 833)
 
 [node name="CameraLockZone" parent="." unique_id=906295064 instance=ExtResource("4_tkcya")]
 position = Vector2(1137, 286.00003)
@@ -257,5 +258,5 @@ scale = Vector2(3.33182, 2.8235512)
 metadata/CameraLockPos = Vector2i(0, 200)
 
 [node name="CameraZoomZone" parent="." unique_id=1052618385 instance=ExtResource("5_kus0s")]
-position = Vector2(-1951, 388.99997)
-scale = Vector2(3.4627619, 2.6513038)
+position = Vector2(-1462, 367.00003)
+scale = Vector2(8.765614, 2.943215)

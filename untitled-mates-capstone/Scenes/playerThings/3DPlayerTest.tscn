@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://da50vumf63w72"]
+
+[ext_resource type="PackedScene" uid="uid://bep2xkoapsik0" path="res://Sprites and Assets/3D/Characters/Player/3DSketch.glb" id="1_gchjm"]
+[ext_resource type="Script" uid="uid://cyyt4jwu5w5ok" path="res://Scenes/playerThings/3DPlayer.gd" id="1_q515i"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2f8pd"]
+radius = 0.46972656
+height = 2.6278687
+
+[node name="Player" type="Node3D" unique_id=640313578]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=653348163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3375938, 0, 0)
+script = ExtResource("1_q515i")
+
+[node name="PlayerModel" parent="CharacterBody3D" unique_id=593781011 instance=ExtResource("1_gchjm")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D/PlayerModel" unique_id=751764513]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1118346859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22920877, 0.6690979, 0.024119437)
+shape = SubResource("CapsuleShape3D_2f8pd")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Marker3D" type="Marker3D" parent="CharacterBody3D" unique_id=515246051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3375938, 1.3681133, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Marker3D" unique_id=43967562]
+transform = Transform3D(1, 0, 0, 0, 0.98111224, 0.19343942, 0, -0.19343942, 0.98111224, 0, 1.896, 5.493)
+current = true

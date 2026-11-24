@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		$"../Camera2D".position.y = self.position.y + (get_local_mouse_position().y * Global.cameraMouseInfluence)
 	else: # if camera is locked
 		$"../Camera2D".position = Global.lockedCameraPos + (get_local_mouse_position() * Global.cameraMouseInfluence)
-		
+		#make the camera still be able to move down slightly when at limit
 	if Global.playerDirection != $CollisionShape2D.scale.x:
 		$CollisionShape2D.scale.x = Global.playerDirection #after anim
 		#play turn around anim. should be quick maybe like 5 frames or so. anims will prbably be 24 fps
